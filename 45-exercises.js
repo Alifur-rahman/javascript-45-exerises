@@ -123,8 +123,7 @@ addToDone("Exercise 9 is correct.");
 // Exercise 10
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
 // Assign the result to a variable named fruitsAndVeggies.
-// *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
- fruitsAndVeggies = fruits.concat(vegetables);
+var fruitsAndVeggies = fruits.concat(vegetables);
 assert(
   fruitsAndVeggies,
   [
@@ -219,7 +218,9 @@ assert(plusTwo(0), 2, "zero plus 2 is two");
 
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
-
+function addOne (num) {
+  return num + 1;
+}
 assert(addOne(2), 3, "Exercise 11");
 assert(addOne(0), 1, "Exercise 11");
 assert(addOne(positiveEvenNumber), positiveEvenNumber + 1, "Exercise 11");
@@ -235,7 +236,9 @@ addToDone("Exercise 11 is correct.");
 // Documentation for comparison operators https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators
 // HINT: Use this example code to see these operators in action usage https://gist.github.com/ryanorsinger/e843c7d0966993bd8193f0afabe16ae0
 // If you get stuck, be sure to check the example code and documentation listed above
-
+function isPositive (num) {
+  return num > 0;
+}
 assert(isPositive(0.25), true, "Exercise 12");
 assert(isPositive(0.00001), true, "Exercise 12");
 assert(isPositive(Infinity), true, "Exercise 12");
@@ -250,7 +253,9 @@ addToDone("Exercise 12 is correct.");
 
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
-
+function isNegative (num) {
+  return num < 0;
+}
 assert(isNegative(positiveOddNumber), false, "Exercise 13");
 assert(isNegative(positiveEvenNumber), false, "Exercise 13");
 assert(isNegative(negativeOddNumber), true, "Exercise 13");
@@ -259,7 +264,9 @@ addToDone("Exercise 13 is correct.");
 
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
-
+function isOdd(number) {
+  return (number % 2 !== 0);
+}
 assert(isOdd(positiveOddNumber), true, "Exercise 14");
 assert(isOdd(positiveEvenNumber), false, "Exercise 14");
 assert(isOdd(negativeOddNumber), true, "Exercise 14");
@@ -269,6 +276,9 @@ addToDone("Exercise 14 is correct.");
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
 
+function isEven (number) {
+  return (number % 2 === 0)
+}
 assert(isEven(2), true, "Exercise 15");
 assert(isEven(positiveOddNumber), false, "Exercise 15");
 assert(isEven(positiveEvenNumber), true, "Exercise 15");
@@ -278,7 +288,9 @@ addToDone("Exercise 15 is correct.");
 
 // Exercise 16
 // Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
-
+function identity (input) {
+  return input;
+}
 assert(identity(fruits), fruits, "Exercise 16");
 assert(identity(vegetables), vegetables, "Exercise 16");
 assert(identity(positiveOddNumber), positiveOddNumber, "Exercise 16");
@@ -289,7 +301,9 @@ addToDone("Exercise 16 is correct.");
 
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
-
+function isPositiveOdd (num) {
+  return (num % 2 !== 0 && num > 0);
+}
 assert(isPositiveOdd(3), true, "Exercise 17");
 assert(isPositiveOdd(positiveOddNumber), true, "Exercise 17");
 assert(isPositiveOdd(positiveEvenNumber), false, "Exercise 17");
@@ -300,6 +314,9 @@ addToDone("Exercise 17 is correct.");
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
 
+function isPositiveEven (num) {
+  return (num % 2 === 0 && num > 0);
+}
 assert(isPositiveEven(4), true, "Exercise 18");
 assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
 assert(isPositiveEven(positiveEvenNumber), true, "Exercise 18");
@@ -310,6 +327,9 @@ addToDone("Exercise 18 is correct.");
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
 
+function isNegativeOdd(num) {
+  return (num % 2 !== 0 && num < 0);
+}
 assert(isNegativeOdd(-3), true, "Exercise 19");
 assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
 assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
